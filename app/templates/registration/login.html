@@ -1,0 +1,14 @@
+{% extends 'app/index.html' %}
+
+{% block body %}
+
+    <h1>Login</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>Login</button>
+    </form>
+
+    <a href="{% url 'app:register'%}">Register</a>
+{% endblock %}
